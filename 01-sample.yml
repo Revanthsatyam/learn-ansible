@@ -4,5 +4,11 @@
   tasks:
     - name: INstall nginx
       ansible.builtin.yum:
-        name: httpd
+        name: nginx
         state: latest
+
+    - name: INstall nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: started
+        enabled: yes
